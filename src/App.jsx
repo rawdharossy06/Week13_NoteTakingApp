@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import CreateNote from './pages/CreateNote';
 import ViewNotes from './pages/ViewNotes';
+import React from 'react';
 
 function App() {
   return (
@@ -17,6 +18,5 @@ function App() {
       </div>
     </Router>
   );
-}
-
+} 
 export default App;

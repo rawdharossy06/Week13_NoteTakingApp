@@ -140,5 +140,13 @@ router.delete("/:id", async (req, res, next) => {
     next(err);
   }
 });
+// Error handling middleware
+router.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({
+    message: "Internal Server Error",
+    error: err.message || "An unexpected error occurred",
+  });
+});
 
 export default router;
